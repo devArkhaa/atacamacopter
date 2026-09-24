@@ -75,8 +75,9 @@ h2{font-size:clamp(2.6rem,5vw,4.4rem)}
 .hero .plan{position:absolute;inset:0;width:100%;height:100%}
 .hero .veil{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--paper) 0%,rgba(242,242,238,.94) 26%,rgba(242,242,238,0) 44%)}
 .hero .copy{position:relative;z-index:2;max-width:1360px;margin:0 auto;padding:clamp(40px,7vh,88px) var(--gut) 64px}
-.hero h1{font-size:clamp(3.6rem,7.4vw,6rem);max-width:8.2em;line-height:.9}
+.hero h1{font-size:clamp(2.6rem,4.6vw,4.3rem);max-width:10.4em;line-height:.92}
 .hero h1 em{font-style:normal;color:var(--red)}
+.nw{white-space:nowrap}
 .hero .lead{margin:26px 0 34px;max-width:40ch}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .hero .note{position:absolute;z-index:2;left:var(--gut);bottom:22px;color:var(--muted)}
@@ -282,6 +283,7 @@ footer{background:var(--ink);color:#C9CDD2;padding:clamp(56px,7vw,88px) 0 28px}
   .hero .veil{display:none}
   .hero .copy{padding:44px var(--gut) 30px;order:1}
   .hero .plan{position:relative;order:2;height:420px;border-top:1.5px solid var(--rule)}
+  .hero h1{font-size:clamp(2.4rem,10.5vw,3.2rem)}
   .hero .ctas .btn{flex:1 1 100%}
   .reel{width:100%}
   .hero .note{position:static;order:4;padding:12px var(--gut) 18px}
@@ -360,7 +362,7 @@ footer{background:var(--ink);color:#C9CDD2;padding:clamp(56px,7vw,88px) 0 28px}
   <svg class="plan" id="heroPlan" role="img" aria-label="Plano referencial del valle de Copiapó con la ruta desde el helipuerto SHHO hacia la cordillera"></svg>
   <div class="veil"></div>
   <div class="copy">
-    <h1 id="h1">Volamos donde <em>otros no llegan</em></h1>
+    <h1 id="h1">Operación aérea en el desierto y <em><span class="nw">la cordillera</span> de Atacama</em></h1>
     <p class="lead">Servicios aéreos en helicóptero desde Copiapó para la minería, las telecomunicaciones, emergencias médicas y el turismo en la Región de Atacama.</p>
     <div class="ctas">
       <a class="btn btn-red" href="#servicios">Ver los 8 servicios <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
