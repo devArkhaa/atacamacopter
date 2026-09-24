@@ -108,9 +108,9 @@ h2{font-size:clamp(2.6rem,5vw,4.4rem)}
 
 /* legend */
 .legend{border-bottom:1.5px solid var(--rule);background:var(--paper)}
-.legend .wrap{display:grid;grid-template-columns:auto repeat(4,1fr) auto;align-items:stretch}
+.legend .wrap{display:grid;grid-template-columns:repeat(4,1fr) auto;align-items:stretch}
 .legend .wrap>*{padding:22px 22px;border-left:1px solid var(--hair);display:flex;align-items:center;gap:14px}
-.legend .wrap>:first-child{border-left:0;padding-left:0;font:700 22px/1 var(--display);letter-spacing:.08em;text-transform:uppercase}
+.legend .wrap>:first-child{border-left:0;padding-left:0}
 .legend svg{width:34px;height:34px;flex:none}
 .legend span{font-weight:600;font-size:16px;line-height:1.25}
 .legend .scale{color:var(--muted);flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}
@@ -263,9 +263,8 @@ footer{background:var(--ink);color:#C9CDD2;padding:clamp(56px,7vw,88px) 0 28px}
   .readout{margin-left:auto}
   .head .burger{margin-left:0}
   .legend .wrap{grid-template-columns:repeat(2,1fr)}
-  .legend .wrap>:first-child{grid-column:1/-1;padding:22px 0 0}
-  .legend .wrap>*{border-left:0;border-top:1px solid var(--hair)}
-  .legend .wrap>:first-child{border-top:0}
+  .legend .wrap>*{border-left:0;border-top:1px solid var(--hair);padding-left:0}
+  .legend .wrap>:nth-child(-n+2){border-top:0}
   .legend .scale{grid-column:1/-1}
 }
 .menu.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1.5px solid var(--rule);padding:8px var(--gut) 18px}
@@ -317,6 +316,7 @@ footer{background:var(--ink);color:#C9CDD2;padding:clamp(56px,7vw,88px) 0 28px}
 @media (max-width:520px){
   .svc-plan .cap span:last-child{display:none}
   .legend .wrap{grid-template-columns:1fr}
+  .legend .wrap>:nth-child(2){border-top:1px solid var(--hair)}
   .gal{grid-template-columns:1fr}
 }
 </style>
@@ -383,9 +383,8 @@ footer{background:var(--ink);color:#C9CDD2;padding:clamp(56px,7vw,88px) 0 28px}
   <p class="note lbl">Plano referencial, no a escala · fotos de prueba</p>
 </section>
 
-<section class="legend" aria-label="Leyenda">
+<section class="legend" aria-label="Fortalezas de Atacama Copter">
   <div class="wrap">
-    <div>Leyenda</div>
     <div><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="14" fill="#F2F2EE" stroke="#C8102E" stroke-width="2.4"/><path d="M12.5 10.5v13M21.5 10.5v13M12.5 17h9" stroke="#16191D" stroke-width="2.4"/></svg><span>Helipuerto propio SHHO</span></div>
     <div><svg viewBox="0 0 34 34" aria-hidden="true"><rect x="4" y="9" width="26" height="18" fill="url(#hatch)" stroke="#16191D" stroke-width="1.8"/><path d="M4 27h26" stroke="#C8102E" stroke-width="3"/></svg><span>Hangar en Copiapó</span></div>
     <div><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M3 27 C9 20 13 22 17 14 C20 8 25 9 31 6" fill="none" stroke="#8C7960" stroke-width="2"/><path d="M3 31 C10 26 15 27 19 20 C22 15 26 15 31 13" fill="none" stroke="#8C7960" stroke-width="1.2"/><path d="M3 22 C8 16 12 17 15 10 C17 6 21 5 25 3" fill="none" stroke="#8C7960" stroke-width="1.2"/></svg><span>Operación en alta montaña</span></div>
